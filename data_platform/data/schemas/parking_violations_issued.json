@@ -1,0 +1,142 @@
+{
+    "table_name": "parking_violations_issued",
+    "columns": [
+        {
+            "name": "summons_number",
+            "type": "BIGINT",
+            "primary_key": true
+        },
+        {
+            "name": "registration_state",
+            "type": "TEXT"
+        },
+        {
+            "name": "plate_type",
+            "type": "TEXT"
+        },
+        {
+            "name": "issue_date",
+            "type": "DATE"
+        },
+        {
+            "name": "violation_code",
+            "type": "INTEGER"
+        },
+        {
+            "name": "vehicle_body_type",
+            "type": "TEXT"
+        },
+        {
+            "name": "vehicle_make",
+            "type": "TEXT"
+        },
+        {
+            "name": "issuing_agency",
+            "type": "TEXT"
+        },
+        {
+            "name": "vehicle_expiration_date",
+            "type": "TEXT"
+        },
+        {
+            "name": "violation_location",
+            "type": "TEXT"
+        },
+        {
+            "name": "violation_precinct",
+            "type": "INTEGER"
+        },
+        {
+            "name": "issuer_precinct",
+            "type": "INTEGER"
+        },
+        {
+            "name": "issuer_code",
+            "type": "INTEGER"
+        },
+        {
+            "name": "issuer_command",
+            "type": "TEXT"
+        },
+        {
+            "name": "issuer_squad",
+            "type": "TEXT"
+        },
+        {
+            "name": "violation_time",
+            "type": "TEXT"
+        },
+        {
+            "name": "time_first_observed",
+            "type": "TEXT"
+        },
+        {
+            "name": "violation_county",
+            "type": "TEXT"
+        },
+        {
+            "name": "violation_in_front_of_or_opposite",
+            "type": "TEXT"
+        },
+        {
+            "name": "date_first_observed",
+            "type": "TEXT"
+        },
+        {
+            "name": "law_section",
+            "type": "INTEGER"
+        },
+        {
+            "name": "sub_division",
+            "type": "TEXT"
+        },
+        {
+            "name": "violation_legal_code",
+            "type": "TEXT"
+        },
+        {
+            "name": "days_parking_in_effect",
+            "type": "TEXT"
+        },
+        {
+            "name": "from_hours_in_effect",
+            "type": "TEXT"
+        },
+        {
+            "name": "to_hours_in_effect",
+            "type": "TEXT"
+        },
+        {
+            "name": "vehicle_color",
+            "type": "TEXT"
+        },
+        {
+            "name": "unregistered_vehicle",
+            "type": "TEXT"
+        },
+        {
+            "name": "vehicle_year",
+            "type": "INTEGER"
+        },
+        {
+            "name": "meter_number",
+            "type": "TEXT"
+        },
+        {
+            "name": "feet_from_curb",
+            "type": "INTEGER"
+        },
+        {
+            "name": "no_standing_or_stopping_violation",
+            "type": "TEXT"
+        },
+        {
+            "name": "hydrant_violation",
+            "type": "TEXT"
+        },
+        {
+            "name": "double_parking_violation",
+            "type": "TEXT"
+        }
+    ]
+}
