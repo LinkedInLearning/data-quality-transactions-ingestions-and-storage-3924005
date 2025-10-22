@@ -1,0 +1,76 @@
+services:
+  python-env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VARIANT: "3.10"
+        NODE_VERSION: "lts/*"
+    volumes:
+      - .:/workspaces/data-quality-transactions-ingestions-and-storage-3924005:cached
+    command: sh -c "sh data_platform/setup_data_platform.sh && touch .setup_complete && sleep infinity"
+    environment:
+      - PYTHONPATH=/workspaces/data-quality-transactions-ingestions-and-storage-3924005
+    working_dir: /workspaces/data-quality-transactions-ingestions-and-storage-3924005
+    user: vscode
+    networks:
+      - app-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "test -f .setup_complete"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+
+  postgres:
+    image: postgres:17-alpine
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  minio:
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio-data:/data
+    command: server /data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 5s
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  minio-data:

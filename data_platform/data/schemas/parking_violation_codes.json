@@ -1,0 +1,22 @@
+{
+    "table_name": "parking_violation_codes",
+    "columns": [
+        {
+            "name": "code",
+            "type": "INTEGER",
+            "primary_key": true
+        },
+        {
+            "name": "definition",
+            "type": "TEXT"
+        },
+        {
+            "name": "manhattan_96th_st_below",
+            "type": "INTEGER"
+        },
+        {
+            "name": "all_other_areas",
+            "type": "INTEGER"
+        }
+    ]
+}
