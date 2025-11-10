@@ -1,11 +1,59 @@
-Copyright 2023 LinkedIn Corporation
+Copyright 2025 LinkedIn Corporation
 All Rights Reserved.
 
 Licensed under the LinkedIn Learning Exercise File License (the "License").
 See LICENSE in the project root for license information.
 
 ATTRIBUTIONS:
-[PLEASE PROVIDE ATTRIBUTIONS OR DELETE THIS AND THE ABOVE LINE “ATTRIBUTIONS”]
+
+pandas  
+<https://github.com/pandas-dev/pandas>  
+License: BSD 3-Clause  
+<https://github.com/pandas-dev/pandas/blob/main/LICENSE>
+--------------------------------------------------------
+
+jupyter  
+<https://github.com/jupyter/jupyter>  
+License: BSD 3-Clause  
+<https://github.com/jupyter/jupyter/blob/master/LICENSE>
+--------------------------------------------------------
+
+psycopg  
+<https://github.com/psycopg/psycopg>  
+License: GNU LGPL v3.0  
+<https://github.com/psycopg/psycopg/blob/master/LICENSE.txt>
+------------------------------------------------------------
+
+minio (Python client)  
+<https://github.com/minio/minio-py>  
+License: Apache 2.0  
+<https://github.com/minio/minio-py/blob/master/LICENSE>
+-------------------------------------------------------
+
+fastavro  
+<https://github.com/fastavro/fastavro>  
+License: MIT  
+<https://github.com/fastavro/fastavro/blob/master/LICENSE>
+----------------------------------------------------------
+
+duckdb  
+<https://github.com/duckdb/duckdb>  
+License: MIT  
+<https://github.com/duckdb/duckdb/blob/main/LICENSE>
+----------------------------------------------------
+
+actions/checkout  
+<https://github.com/actions/checkout>  
+License: MIT  
+<https://github.com/actions/checkout/blob/main/LICENSE>
+-------------------------------------------------------
+
+planetoftheweb/copy-to-branches  
+<https://github.com/planetoftheweb/copy-to-branches>  
+License: MIT  
+<https://github.com/planetoftheweb/copy-to-branches/blob/main/LICENSE>
+----------------------------------------------------------------------
+
 
 Please note, this project may automatically load third party code from external 
 repositories (for example, NPM modules, Composer packages, or other dependencies). 
